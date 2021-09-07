@@ -1,0 +1,143 @@
+.section-about {
+  padding-top: 8rem;
+  position: relative;
+
+  &:first-child {
+    @include respond(tab-land) {
+      // width < 1200?
+      font-size: 25.25%; //1 rem = 9px, 9/16 = 50%
+    }
+  }
+
+  &__div1 {
+    margin-bottom: 0 !important;
+  }
+}
+
+.section-comment {
+  padding-top: 9rem;
+
+  @include respond(phone) {
+    // width < 600?
+    width: 90%;
+    transform: translate(-5%, 0);
+
+    &:last-child {
+      margin-top: 5rem;
+    }
+  }
+
+  &__box {
+    width: 95%;
+    padding: 3rem 5rem 3rem 3rem;
+    border: 2px solid $color-grey-dark-0;
+    border-radius: 0.8rem;
+    position: relative;
+
+    &::before {
+      content: "\201C";
+      position: absolute;
+      top: 40%;
+      left: 1.3rem;
+      line-height: 1;
+      font-size: 10rem;
+      color: var(--color-grey-light-0);
+      font-family: BLotus, "BLotus", tahoma;
+      z-index: 1;
+      opacity: 0.2;
+      transform: rotate(180deg);
+      overflow: hidden;
+    }
+
+    @include respond(phone) {
+      width: 90%;
+      transform: translate(-5%, 0);
+
+      &:last-child {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  &__title {
+    color: $color-grey-dark-0;
+    font-size: 1.7rem;
+  }
+
+  &__pic {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    top: -3.3rem;
+    right: -3.3rem;
+  }
+
+  &__img {
+    height: 100%;
+    backface-visibility: hidden;
+  }
+}
+
+.section-brand {
+  padding-top: 10rem;
+  font-size: 2.5rem;
+
+  @include respond(phone) {
+    &__div {
+      &:not(:first-child) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.section-statistic {
+  padding-top: 10rem;
+  font-size: 4rem;
+
+  &__box {
+    text-align: center;
+    padding: 2rem 3rem;
+    border: 2px solid $color-grey-dark-0;
+    border-radius: 0.8rem;
+  }
+
+  &__icon {
+    font-size: 5rem;
+    height: 8rem;
+    color: $color-blue;
+    display: block;
+    line-height: 10rem;
+  }
+}
+
+.section-price {
+  padding-top: 15rem;
+
+  &__box {
+    min-height: 50rem;
+    text-align: center;
+    padding: 3rem 3rem;
+    border: 2px solid $color-grey-dark-0;
+    border-radius: 0.8rem;
+
+    a {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__price-number {
+    display: block;
+    font-size: 4rem;
+  }
+
+  &__paragraph {
+    color: $color-grey-dark-2;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 0.6rem;
+  }
+}

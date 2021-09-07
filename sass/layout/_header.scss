@@ -1,0 +1,61 @@
+.header {
+  padding: 12rem 0;
+
+  @include respond(tab-land) {
+    padding: 7rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 3rem 0;
+  }
+
+  &__col-1 {
+    margin: 0 0 !important;
+    width: calc(100% / 2) !important;
+    z-index: 1;
+
+    @include respond(tab-land) {
+      width: 100% !important;
+      text-align: center;
+      padding: 2rem 0;
+      margin-bottom: 5rem !important;
+      z-index: 2;
+    }
+  }
+
+  &__col-2 {
+    margin: 0 0 !important;
+    width: calc(100% / 2) !important;
+    z-index: 2;
+    @include respond(tab-land) {
+      width: 100% !important;
+      text-align: center;
+      padding: 2rem 0;
+    }
+  }
+
+  &__title {
+    color: $color-grey-dark-1;
+    font-size: 1.9rem;
+  }
+
+  &__profile {
+    width: 33rem;
+    height: 33rem;
+    margin: 0 18rem;
+    border-radius: 50%;
+    border: 1.7rem solid white;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 0 0rem 2rem rgba($color-black, 0.2);
+
+    @include respond(tab-land) {
+      margin: 0;
+    }
+
+    &__img {
+      height: 100%;
+      backface-visibility: hidden;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.section-about {
+  &__box {
+    width: 95%;
+  }
+
+  &__icon {
+    font-size: 4.5rem;
+    display: inline;
+    color: $color-blue;
+    float: right;
+  }
+
+  &__text {
+    padding: 0 8rem 0 0;
+  }
+}

@@ -1,0 +1,69 @@
+.footer {
+  padding-top: 15rem;
+  font-size: 1.4rem;
+
+  @include respond(phone) {
+    text-align: center;
+  }
+
+  &__text {
+    float: left;
+    font-size: 1.6rem;
+
+    @include respond(phone) {
+      float: none;
+    }
+  }
+
+  &__nav {
+    float: left;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-left: 5rem;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        display: block;
+        content: "\2022";
+        font-family: BLotus, "BLotus", tahoma;
+        color: $color-grey-dark-2;
+        position: absolute;
+        left: -3rem;
+        top: 60%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-grey-dark-1;
+    font-size: 1.9rem;
+  }
+
+  &__social {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 10px;
+    color: rgb(177, 24, 24);
+    position: relative;
+    border-radius: 30px;
+    background-color: #797fc9;
+  }
+}

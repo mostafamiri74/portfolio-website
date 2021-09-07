@@ -1,0 +1,113 @@
+.navigation {
+  background-color: $color-grey-light-1;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  @include respond(phone) {
+    display: none;
+  }
+
+  &__nav-div {
+    @include respond(tab-port) {
+      margin-right: -6rem;
+      width: 70% !important;
+    }
+
+    @include respond(phone) {
+      margin-right: 0rem;
+      text-align: center;
+    }
+  }
+
+  &__nav {
+    float: left;
+
+    @include respond(phone) {
+      float: none;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 2rem 0;
+
+    &:not(:last-child) {
+      margin-left: 4rem;
+    }
+
+    @include respond(phone) {
+      display: block;
+      margin-left: 0;
+
+      &:not(:last-child) {
+        margin-left: 0;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-grey-dark-2;
+    font-size: 2rem;
+  }
+
+  &__active {
+    color: $color-grey-dark-3;
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 0.4rem;
+      width: 3rem;
+      background-color: $color-blue;
+      border-radius: 50px;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      bottom: -0.8rem;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__profile-div {
+    position: relative;
+
+    @include respond(tab-port) {
+      width: 30% !important;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__profile-box {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  &__profile-img {
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  &__profile-name {
+    display: inline-block;
+    margin-right: 3rem;
+    position: absolute;
+    top: 16%;
+  }
+}

@@ -1,0 +1,23 @@
+.section-heading-box {
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.section-heading-title {
+  color: $color-grey-dark-4;
+  font-size: 2.7rem;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: 2px solid $color-grey-dark-0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -0.2rem;
+    right: 0;
+    width: 35%;
+    height: 0.2rem;
+    background-color: $color-blue;
+  }
+}
